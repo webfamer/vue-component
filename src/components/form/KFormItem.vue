@@ -40,7 +40,7 @@ export default {
 
       //执行校验 
       const schema = new Schema(desc);
-        schema.validate({[this.prop]:value},errors=>{
+      return schema.validate({[this.prop]:value},errors=>{
           if(errors){
             this.error = errors[0].message
             console.log(this.error)
