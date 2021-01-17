@@ -13,3 +13,9 @@ export default new Vuex.Store({
   modules: {
   }
 })
+export const store = Vue.observable({count:0})
+export const mutations = {
+  setCount(count){
+    store.count = count;
+  }
+}
